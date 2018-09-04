@@ -1,9 +1,9 @@
 require('@babel/register')({
-  plugins: ['styled-jsx/babel'],
-  presets: ['@babel/preset-env', [
+  presets: [[
     'next/babel',
     {
-      'styled-jsx': { optimizeForSpeed: true }
+      'styled-jsx': { optimizeForSpeed: true },
+      'preset-env': {modules: 'commonjs'}
     }
   ], '@babel/preset-stage-0'],
   babelrc: false,
